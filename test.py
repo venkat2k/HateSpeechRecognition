@@ -1,4 +1,4 @@
-from idk import HateSpeechDetector
+from HateSpeechDetection import HateSpeechDetector
 import warnings
 warnings.filterwarnings("ignore")
 tool = HateSpeechDetector("english")

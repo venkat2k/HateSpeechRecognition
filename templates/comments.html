@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+* {
+  box-sizing: border-box;
+  background-color:black;
+}
+
+input[type=text], select, textarea {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 15px 0;
+  display: inline-block;
+}
+
+button{
+  margin:auto;
+  display:block;
+}
+
+button[type=button] {
+  padding:16px 32px;
+  font-family:helvetica;
+  font-size:16px;
+  font-weight:100;
+  color:#fff;
+  background: #587286;
+  border:0;
+  font-weight:100;
+  
+}
+
+button[type=button]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: -30px ;
+}
+
+.col-25 {
+  color: white;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  text-align:right;
+  font-size: large;
+  font-family: Helvetica;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 15px;
+  
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-15, .col-75, button[type=button] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Comments:</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="Comments" placeholder="Comment here" style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="btn">
+     <text-align:"center">
+    <button type="button">Post</button>
+  </div>
+  </form>
+</div>
+
+</body>
+</html>

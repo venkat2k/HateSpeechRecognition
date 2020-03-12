@@ -41,7 +41,8 @@ class HateSpeechDetector:
         words = text.split(" ")
         for word in words:
             stemmed_words.append(self.stemmer.stem(word))
-        text = " ".join(words)
+        text = " ".join(stemmed_words)
+        text = text.lower()
         return text
     
     def preprocess_training_set(self, filename, additional = []):
@@ -82,7 +83,7 @@ class HateSpeechDetector:
     
     def predict(self, text):
         text = self.preprocess(text)
-        print(text)
+        #print(text)
         test_features = numpy.array([text])
         test_features = TfidfVectorizer.transform(self.vectorizer, test_features)
         selector = SelectPercentile(f_classif, percentile=95)
